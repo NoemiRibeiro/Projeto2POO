@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.gov.sp.fatec;
+package br.gov.sp.fatec.db;
 
 import java.util.ArrayList;
 /**
@@ -25,6 +25,14 @@ public class Db {
     
     private static ArrayList<Fornecedor> fornecedores;
     public static ArrayList<Fornecedor> getFornecedores(){
+        
+        if (fornecedores == null)
+        {
+            fornecedores = new ArrayList<>();
+            Fornecedor test = new Fornecedor();
+            test.setFornecedor("Teste", "Teste S.A.", "00.111.222/0003-44", "teste@empresa.com.br", "(55)5555-5555", "Rua 6,666");
+            fornecedores.add(test);
+        }
         return fornecedores;
     }
     

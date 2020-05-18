@@ -5,8 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="br.gov.sp.fatec.Cliente" %>
-<%@page import="br.gov.sp.fatec.Db" %>
+<%@page import="br.gov.sp.fatec.db.Cliente" %>
+<%@page import="br.gov.sp.fatec.db.Db" %>
 <!DOCTYPE html>
 <%
     String error = null;

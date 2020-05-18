@@ -3,29 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.gov.sp.fatec;
+package br.gov.sp.fatec.db;
 
 /**
  *
  * @author NOEMI
  */
-public class Cliente {
+public class Fornecedor {
     private String nome;
-    private String cpf;
-    private String rg;
+    private String razaoSocial;
+    private String cnpj;
     private String email;
     private String telefone;
     private String endereco;
-
-    public void setCliente(String nome, String cpf, String rg, String email, String telefone, String endereco){
+    
+    public void setFornecedor(String nome, String razaoSocial, String cnpj, String email, String telefone, String endereco){
         this.setNome(nome);
-        this.setCpf(cpf);
-        this.setRg(rg);
+        this.setRazaoSocial(razaoSocial);
+        this.setCnpj(cnpj);
         this.setEmail(email);
         this.setTelefone(telefone);
         this.setEndereco(endereco);
     }
-    
+
     public String getNome() {
         return nome;
     }
@@ -34,20 +34,20 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getRazaoSocial() {
+        return razaoSocial;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setRazaoSocial(String razaoSocial) {
+        this.razaoSocial = razaoSocial;
     }
 
-    public String getRg() {
-        return rg;
+    public String getCnpj() {
+        return cnpj;
     }
 
-    public void setRg(String rg) {
-        this.rg = rg;
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
 
     public String getEmail() {
@@ -73,6 +73,5 @@ public class Cliente {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-    
     
 }

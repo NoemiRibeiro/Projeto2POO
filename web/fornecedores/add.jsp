@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="br.gov.sp.fatec.db.Cliente" %>
+<%@page import="br.gov.sp.fatec.db.Fornecedor" %>
 <%@page import="br.gov.sp.fatec.db.Db" %>
 <!DOCTYPE html>
 <%
@@ -13,43 +13,43 @@
     
     if(request.getParameter("add") != null){
         String nome = request.getParameter("nome");
-        String cpf = request.getParameter("cpf");
-        String rg = request.getParameter("rg");
+        String razaoSocial = request.getParameter("razaoSocial");
+        String cnpj = request.getParameter("cnpj");
         String email = request.getParameter("email");
         String telefone = request.getParameter("telefone");
         String endereco = request.getParameter("endereco");
         if(nome.isEmpty())error = "Nome não pode ser nulo";
-        else if(cpf.isEmpty())error = "CPF não pode ser nulo";
-        else if(rg.isEmpty())error = "RG não pode ser nulo";
+        else if(razaoSocial.isEmpty())error = "Razão Social não pode ser nulo";
+        else if(cnpj.isEmpty())error = "CNPJ não pode ser nulo";
         else if(email.isEmpty())error = "E-mail não pode ser nulo";
         else if(telefone.isEmpty())error = "Telefone não pode ser nulo";
         else if(endereco.isEmpty())error = "Endereço não pode ser nulo";
         else {
-                Cliente client = new Cliente();
-                client.setCliente(nome, cpf, rg, email, telefone, endereco);
-                Db.getClientes().add(client);
+                Fornecedor supplyer = new Fornecedor();
+                supplyer.setFornecedor(nome, razaoSocial, cnpj, email, telefone, endereco);
+                Db.getFornecedores().add(supplyer);
                 response.sendRedirect("list.jsp");
             }
         }
 %>
 <html>
     <head>
-        <title>Cadastro de Cliente - Cadastro WebApp</title>
+        <title>Cadastro de Fornecedor - Cadastro WebApp</title>
     </head>
     <body>
         <%@include file="../WEB-INF/jspf/header.jspf" %>
         <%@include file="../WEB-INF/jspf/menu.jspf" %>
-        <h3>Cadastrar Cliente</h3>
+        <h3>Cadastrar Fornecedor</h3>
         <%if (error != null) { %>
         <div style="color: red"><%=error%></div>
         <% }%>
         <form method="post">
             Nome:<br/>
             <input type="text" name="nome"/><br/>
-            CPF:<br/>
-            <input type="text" name="cpf"/><br/>
-            RG:<br/>
-            <input type="text" name="rg"/><br/>
+            Razão Social:<br/>
+            <input type="text" name="razaoSocial"/><br/>
+            CNPJ:<br/>
+            <input type="text" name="cnpj"/><br/>
             Email:<br/>
             <input type="email" name="email"/><br/>
             Telefone:<br/>
