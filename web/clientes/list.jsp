@@ -10,14 +10,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lista de Clientes</title>
+        <title>Lista de Clientes - Cadastro Web App</title>
     </head>
     <body>
         <%@include file="../WEB-INF/jspf/header.jspf" %>
         <%@include file="../WEB-INF/jspf/menu.jspf" %>
-        <h4>Lista de  Clientes</h4>
+        <center><h3>Lista de  Clientes</h3>
         
-        <table border="1">
+    <table border="1">
             <tr>
                 <th>Nome</th>
                 <th>CPF</th>
@@ -37,14 +37,14 @@
                 <td><%= client.getEndereco()%></td>
                 <td>
                     <%int index = Db.getClientes().indexOf(client);%>
-                    <a href="#">Alterar</a>
-                    <a href="#">Excluir</a>
+                    <a href="set.jsp?index=<%=index%>">Alterar</a>
+                    <a href="remove.jsp?index=<%=index%>">Excluir</a>
                 </td>
             </tr>            
             <% } %>
             
                    
-        </table>
+        </table></center>
         
     </body>
 </html>
