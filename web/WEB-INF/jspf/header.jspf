@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<header style="text-align: center">
+    <h1><a href="<%= request.getContextPath() %>/index.jsp">Sistema de Cadastro</a></h1>
+</header>
+=======
+<%@ page pageEncoding="UTF-8" %>
+<header style="text-align: center">
+     <p class="texto">Sistema de Cadastro</p>
+</header>
+<style>
+
+</style>
+>>>>>>> origin/master

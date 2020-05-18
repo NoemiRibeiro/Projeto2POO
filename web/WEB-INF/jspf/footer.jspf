@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<footer style="text-align: center">
+    <b class="titulo"> Desenvolvido por: </b><br> <p class="txt">| Thiago de Sousa | --- | Noemi Ribeiro | --- | Moisés Santana |</p>
+</footer>
+=======
+<%@ page pageEncoding="UTF-8" %>
+<footer style="text-align: center">
+    <b class="titulo"> Desenvolvido por: </b><br> <p class="txt">| Thiago de Sousa | --- | Noemi Ribeiro | --- | Moisés Santana |</p>
+</footer>
+<style>
+    
+</style>
+>>>>>>> origin/master
