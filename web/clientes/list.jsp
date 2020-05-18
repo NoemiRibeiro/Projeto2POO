@@ -13,7 +13,8 @@
         <title>Lista de Clientes</title>
     </head>
     <body>
-        <h3><a href="<%= request.getContextPath() %>/cliente.jsp">Clientes</a></h3>
+        <%@include file="../WEB-INF/jspf/header.jspf" %>
+        <%@include file="../WEB-INF/jspf/menu.jspf" %>
         <h4>Lista de  Clientes</h4>
         
         <table border="1">
@@ -30,7 +31,7 @@
             <tr>
                 <td><%= client.getNome() %></td>
                 <td><%= client.getCpf()%></td>
-                <td><%= client.getRg() %></td>]
+                <td><%= client.getRg() %></td>
                 <td><%= client.getEmail() %></td>
                 <td><%= client.getTelefone() %></td>
                 <td><%= client.getEndereco()%></td>

@@ -37,8 +37,8 @@
         <title>Cadastrar Novo Cliente</title>
     </head>
     <body>
-        
-        <h3><a href="<%= request.getContextPath() %>/cliente.jsp">Clientes</a></h3>
+        <%@include file="../WEB-INF/jspf/header.jspf" %>
+        <%@include file="../WEB-INF/jspf/menu.jspf" %>
         <h4>Cadastrar Cliente</h4>
         <%if (error != null) { %>
         <div style="color: red"><%=error%></div>

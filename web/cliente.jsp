@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <%-- 
     Document   : cliente
     Created on : 18/05/2020, 12:23:46

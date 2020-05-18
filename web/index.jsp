@@ -5,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <html>
     <head>
         <title>Projeto 02 - Cadastro WebApp</title>
